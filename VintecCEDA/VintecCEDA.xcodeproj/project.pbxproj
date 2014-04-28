@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7F063FD190F043500EC3787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F063FC190F043500EC3787 /* Foundation.framework */; };
+		A7F063FF190F043500EC3787 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F063FE190F043500EC3787 /* CoreGraphics.framework */; };
+		A7F06401190F043500EC3787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F06400190F043500EC3787 /* UIKit.framework */; };
+		A7F06407190F043500EC3787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F06405190F043500EC3787 /* InfoPlist.strings */; };
+		A7F06409190F043500EC3787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F06408190F043500EC3787 /* main.m */; };
+		A7F0640D190F043500EC3787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0640C190F043500EC3787 /* AppDelegate.m */; };
+		A7F06415190F043500EC3787 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F06414190F043500EC3787 /* Images.xcassets */; };
+		A7F0641C190F043500EC3787 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F0641B190F043500EC3787 /* XCTest.framework */; };
+		A7F0641D190F043500EC3787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F063FC190F043500EC3787 /* Foundation.framework */; };
+		A7F0641E190F043500EC3787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F06400190F043500EC3787 /* UIKit.framework */; };
+		A7F06426190F043500EC3787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F06424190F043500EC3787 /* InfoPlist.strings */; };
+		A7F06428190F043500EC3787 /* VintecCEDATests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F06427190F043500EC3787 /* VintecCEDATests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7F0641F190F043500EC3787 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7F063F1190F043500EC3787 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7F063F8190F043500EC3787;
+			remoteInfo = VintecCEDA;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7F063F9190F043500EC3787 /* VintecCEDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VintecCEDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F063FC190F043500EC3787 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A7F063FE190F043500EC3787 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7F06400190F043500EC3787 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A7F06404190F043500EC3787 /* VintecCEDA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VintecCEDA-Info.plist"; sourceTree = "<group>"; };
+		A7F06406190F043500EC3787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7F06408190F043500EC3787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A7F0640A190F043500EC3787 /* VintecCEDA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VintecCEDA-Prefix.pch"; sourceTree = "<group>"; };
+		A7F0640B190F043500EC3787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A7F0640C190F043500EC3787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A7F06414190F043500EC3787 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A7F0641A190F043500EC3787 /* VintecCEDATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VintecCEDATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F0641B190F043500EC3787 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A7F06423190F043500EC3787 /* VintecCEDATests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VintecCEDATests-Info.plist"; sourceTree = "<group>"; };
+		A7F06425190F043500EC3787 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A7F06427190F043500EC3787 /* VintecCEDATests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VintecCEDATests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7F063F6190F043500EC3787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F063FF190F043500EC3787 /* CoreGraphics.framework in Frameworks */,
+				A7F06401190F043500EC3787 /* UIKit.framework in Frameworks */,
+				A7F063FD190F043500EC3787 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F06417190F043500EC3787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F0641C190F043500EC3787 /* XCTest.framework in Frameworks */,
+				A7F0641E190F043500EC3787 /* UIKit.framework in Frameworks */,
+				A7F0641D190F043500EC3787 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7F063F0190F043500EC3787 = {
+			isa = PBXGroup;
+			children = (
+				A7F06402190F043500EC3787 /* VintecCEDA */,
+				A7F06421190F043500EC3787 /* VintecCEDATests */,
+				A7F063FB190F043500EC3787 /* Frameworks */,
+				A7F063FA190F043500EC3787 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7F063FA190F043500EC3787 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7F063F9190F043500EC3787 /* VintecCEDA.app */,
+				A7F0641A190F043500EC3787 /* VintecCEDATests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7F063FB190F043500EC3787 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7F063FC190F043500EC3787 /* Foundation.framework */,
+				A7F063FE190F043500EC3787 /* CoreGraphics.framework */,
+				A7F06400190F043500EC3787 /* UIKit.framework */,
+				A7F0641B190F043500EC3787 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7F06402190F043500EC3787 /* VintecCEDA */ = {
+			isa = PBXGroup;
+			children = (
+				A7F0640B190F043500EC3787 /* AppDelegate.h */,
+				A7F0640C190F043500EC3787 /* AppDelegate.m */,
+				A7F06414190F043500EC3787 /* Images.xcassets */,
+				A7F06403190F043500EC3787 /* Supporting Files */,
+			);
+			path = VintecCEDA;
+			sourceTree = "<group>";
+		};
+		A7F06403190F043500EC3787 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7F06404190F043500EC3787 /* VintecCEDA-Info.plist */,
+				A7F06405190F043500EC3787 /* InfoPlist.strings */,
+				A7F06408190F043500EC3787 /* main.m */,
+				A7F0640A190F043500EC3787 /* VintecCEDA-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7F06421190F043500EC3787 /* VintecCEDATests */ = {
+			isa = PBXGroup;
+			children = (
+				A7F06427190F043500EC3787 /* VintecCEDATests.m */,
+				A7F06422190F043500EC3787 /* Supporting Files */,
+			);
+			path = VintecCEDATests;
+			sourceTree = "<group>";
+		};
+		A7F06422190F043500EC3787 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A7F06423190F043500EC3787 /* VintecCEDATests-Info.plist */,
+				A7F06424190F043500EC3787 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7F063F8190F043500EC3787 /* VintecCEDA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F0642B190F043500EC3787 /* Build configuration list for PBXNativeTarget "VintecCEDA" */;
+			buildPhases = (
+				A7F063F5190F043500EC3787 /* Sources */,
+				A7F063F6190F043500EC3787 /* Frameworks */,
+				A7F063F7190F043500EC3787 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VintecCEDA;
+			productName = VintecCEDA;
+			productReference = A7F063F9190F043500EC3787 /* VintecCEDA.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7F06419190F043500EC3787 /* VintecCEDATests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7F0642E190F043500EC3787 /* Build configuration list for PBXNativeTarget "VintecCEDATests" */;
+			buildPhases = (
+				A7F06416190F043500EC3787 /* Sources */,
+				A7F06417190F043500EC3787 /* Frameworks */,
+				A7F06418190F043500EC3787 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7F06420190F043500EC3787 /* PBXTargetDependency */,
+			);
+			name = VintecCEDATests;
+			productName = VintecCEDATests;
+			productReference = A7F0641A190F043500EC3787 /* VintecCEDATests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7F063F1190F043500EC3787 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Vintec;
+				TargetAttributes = {
+					A7F06419190F043500EC3787 = {
+						TestTargetID = A7F063F8190F043500EC3787;
+					};
+				};
+			};
+			buildConfigurationList = A7F063F4190F043500EC3787 /* Build configuration list for PBXProject "VintecCEDA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7F063F0190F043500EC3787;
+			productRefGroup = A7F063FA190F043500EC3787 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7F063F8190F043500EC3787 /* VintecCEDA */,
+				A7F06419190F043500EC3787 /* VintecCEDATests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7F063F7190F043500EC3787 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F06415190F043500EC3787 /* Images.xcassets in Resources */,
+				A7F06407190F043500EC3787 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F06418190F043500EC3787 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F06426190F043500EC3787 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7F063F5190F043500EC3787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F0640D190F043500EC3787 /* AppDelegate.m in Sources */,
+				A7F06409190F043500EC3787 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7F06416190F043500EC3787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7F06428190F043500EC3787 /* VintecCEDATests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7F06420190F043500EC3787 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7F063F8190F043500EC3787 /* VintecCEDA */;
+			targetProxy = A7F0641F190F043500EC3787 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7F06405190F043500EC3787 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F06406190F043500EC3787 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A7F06424190F043500EC3787 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7F06425190F043500EC3787 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7F06429190F043500EC3787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A7F0642A190F043500EC3787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7F0642C190F043500EC3787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VintecCEDA/VintecCEDA-Prefix.pch";
+				INFOPLIST_FILE = "VintecCEDA/VintecCEDA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A7F0642D190F043500EC3787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VintecCEDA/VintecCEDA-Prefix.pch";
+				INFOPLIST_FILE = "VintecCEDA/VintecCEDA-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A7F0642F190F043500EC3787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VintecCEDA.app/VintecCEDA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VintecCEDA/VintecCEDA-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VintecCEDATests/VintecCEDATests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A7F06430190F043500EC3787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VintecCEDA.app/VintecCEDA";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VintecCEDA/VintecCEDA-Prefix.pch";
+				INFOPLIST_FILE = "VintecCEDATests/VintecCEDATests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7F063F4190F043500EC3787 /* Build configuration list for PBXProject "VintecCEDA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F06429190F043500EC3787 /* Debug */,
+				A7F0642A190F043500EC3787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7F0642B190F043500EC3787 /* Build configuration list for PBXNativeTarget "VintecCEDA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F0642C190F043500EC3787 /* Debug */,
+				A7F0642D190F043500EC3787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7F0642E190F043500EC3787 /* Build configuration list for PBXNativeTarget "VintecCEDATests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7F0642F190F043500EC3787 /* Debug */,
+				A7F06430190F043500EC3787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7F063F1190F043500EC3787 /* Project object */;
+}
