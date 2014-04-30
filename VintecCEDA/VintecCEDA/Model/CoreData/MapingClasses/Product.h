@@ -18,6 +18,6 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * type;
 @property (nonatomic, retain) NSString * unit;
-@property (nonatomic, retain) CDCategory *category;
+@property (nonatomic, retain) NSNumber * categoryId;
 
 @end

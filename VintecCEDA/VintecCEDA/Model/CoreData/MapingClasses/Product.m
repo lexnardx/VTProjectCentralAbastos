@@ -17,6 +17,6 @@
 @dynamic name;
 @dynamic type;
 @dynamic unit;
-@dynamic category;
+@dynamic categoryId;
 
 @end

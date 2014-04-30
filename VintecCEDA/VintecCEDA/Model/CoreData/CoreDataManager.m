@@ -88,6 +88,7 @@ static CoreDataManager *sharedInstance;
     
     if (fetchedObjects == nil) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.managedObjectContext];
+        
     }else{
         entry = [fetchedObjects lastObject];
     }
@@ -102,6 +103,7 @@ static CoreDataManager *sharedInstance;
     }
     
 }
+
 
 
 -(void)insertOrUpdateType:(JMType *)type
@@ -194,6 +196,7 @@ static CoreDataManager *sharedInstance;
     entry.name = product.name;
     entry.type = [NSNumber numberWithInteger:product.typeId];
     entry.unit = product.unit;
+    entry.categoryId = [NSNumber numberWithInteger:product.categoryId];
     
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Couldn't save product: %@", [error localizedDescription]);
@@ -232,6 +235,80 @@ static CoreDataManager *sharedInstance;
     
 }
 
+
+-(void)insertOrUpdatePlace:(JMInterestingPlace *)place
+{
+    Place *entry = nil;
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (fetchedObjects == nil) {
+        entry = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:self.managedObjectContext];
+        
+        
+        
+        for (JMLocation *location in place.locations) {
+            Location *locationCoreData = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+            
+            locationCoreData.identifier = [NSNumber numberWithDouble:location.identifier];
+            locationCoreData.latitude = [NSNumber numberWithDouble:location.latitude];
+            locationCoreData.longitude = [NSNumber numberWithDouble:location.longitude];
+            locationCoreData.place = entry;
+            
+            [entry addLocationObject:locationCoreData];
+        }
+        
+    }else{
+        entry = [fetchedObjects lastObject];
+        
+        [self addOrUpdatePlace:entry withJSONPlace:place];
+    }
+    
+    entry.identifier = [NSNumber numberWithInteger:place.identifier];
+    entry.name = place.name;
+
+    
+    if (![self.managedObjectContext save:&error]) {
+        NSLog(@"Couldn't save location: %@", [error localizedDescription]);
+    }
+    
+}
+
+
+-(void)addOrUpdatePlace:(Place *)place withJSONPlace:(JMInterestingPlace *)jmPlace
+{
+    
+    for (JMLocation *location  in jmPlace.locations) {
+        Location *locationObject = nil;
+        
+        for (Location *aux in place.location) {
+            if ([locationObject.identifier isEqualToNumber:aux.identifier]) {
+                locationObject = aux;
+            }
+        }
+        
+        
+        if (!locationObject) {
+            locationObject = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
+        }
+        
+        locationObject.identifier = [NSNumber numberWithInteger:location.identifier];
+        locationObject.latitude = [NSNumber numberWithDouble:location.latitude];
+        locationObject.longitude = [NSNumber numberWithDouble:location.longitude];
+        locationObject.place = place;
+        
+        
+    }
+    
+}
+
+
+
 -(void)insertOrUpdateLocation:(JMLocation *)location
 {
     Location *entry = nil;
@@ -252,34 +329,6 @@ static CoreDataManager *sharedInstance;
     entry.identifier = [NSNumber numberWithInteger:location.identifier];
     entry.latitude = [NSNumber numberWithDouble:location.latitude];
     entry.longitude = [NSNumber numberWithDouble:location.longitude];
-    
-    if (![self.managedObjectContext save:&error]) {
-        NSLog(@"Couldn't save location: %@", [error localizedDescription]);
-    }
-    
-}
-
-
--(void)insertOrUpdatePlace:(JMInterestingPlace *)place
-{
-    Place *entry = nil;
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    NSError *error = nil;
-    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (fetchedObjects == nil) {
-        entry = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:self.managedObjectContext];
-    }else{
-        entry = [fetchedObjects lastObject];
-    }
-    
-    entry.identifier = [NSNumber numberWithInteger:place.identifier];
-    entry.name = place.name;
-
     
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Couldn't save location: %@", [error localizedDescription]);

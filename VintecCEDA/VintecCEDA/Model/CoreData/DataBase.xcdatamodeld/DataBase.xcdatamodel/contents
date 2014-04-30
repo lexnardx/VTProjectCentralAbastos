@@ -4,7 +4,6 @@
         <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="prduct" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="category" inverseEntity="Product" syncable="YES"/>
     </entity>
     <entity name="Locale" representedClassName="Locale" syncable="YES">
         <attribute name="hall" optional="YES" attributeType="String" syncable="YES"/>
@@ -26,12 +25,12 @@
         <relationship name="location" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Location" inverseName="place" inverseEntity="Location" syncable="YES"/>
     </entity>
     <entity name="Product" representedClassName="Product" syncable="YES">
+        <attribute name="category" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="identifier" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDCategory" inverseName="prduct" inverseEntity="CDCategory" syncable="YES"/>
     </entity>
     <entity name="Section" representedClassName="Section" syncable="YES">
         <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
@@ -58,13 +57,13 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDCategory" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Locale" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Location" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Place" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Product" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Section" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Summary" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Type" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CDCategory" positionX="-90" positionY="11" width="128" height="88"/>
+        <element name="Locale" positionX="-18" positionY="153" width="128" height="135"/>
+        <element name="Location" positionX="115" positionY="-135" width="128" height="105"/>
+        <element name="Place" positionX="133" positionY="72" width="128" height="90"/>
+        <element name="Product" positionX="-252" positionY="18" width="128" height="133"/>
+        <element name="Section" positionX="43" positionY="-225" width="128" height="135"/>
+        <element name="Summary" positionX="-117" positionY="-216" width="128" height="195"/>
+        <element name="Type" positionX="-279" positionY="-198" width="128" height="75"/>
     </elements>
 </model>
