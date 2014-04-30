@@ -5,43 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5BAE4B45-882D-4C5D-A413-7E5D26EA3212</string>
+	<string>54EBC32B-D5DC-4A23-8EE5-71B8C6CB3365</string>
 	<key>IDESourceControlProjectName</key>
 	<string>VintecCEDA</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B6024D26-D635-4A16-AEB8-81155DB2D9B1</key>
-		<string>https://github.com/lexnardx/VTProjectCentralAbastos/trunk</string>
+		<key>3D8DE33E-CA6E-4F15-B298-A645575D9B9D</key>
+		<string>https://github.com/lexnardx/VTProjectCentralAbastos.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>VintecCEDA/VintecCEDA.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B6024D26-D635-4A16-AEB8-81155DB2D9B1</key>
+		<key>3D8DE33E-CA6E-4F15-B298-A645575D9B9D</key>
 		<string>../../..</string>
 	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>B6024D26-D635-4A16-AEB8-81155DB2D9B1</key>
-		<string>https://github.com/lexnardx/VTProjectCentralAbastos</string>
-	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/lexnardx/VTProjectCentralAbastos/trunk/VintecCEDA/VintecCEDA.xcodeproj</string>
+	<string>https://github.com/lexnardx/VTProjectCentralAbastos.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B6024D26-D635-4A16-AEB8-81155DB2D9B1</string>
+	<string>3D8DE33E-CA6E-4F15-B298-A645575D9B9D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B6024D26-D635-4A16-AEB8-81155DB2D9B1</string>
+			<string>3D8DE33E-CA6E-4F15-B298-A645575D9B9D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>VTProjectCentralAbastos</string>
 		</dict>
