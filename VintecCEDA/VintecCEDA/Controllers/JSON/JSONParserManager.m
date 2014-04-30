@@ -11,11 +11,17 @@
 
 @implementation JSONParserManager
 
-+(NSMutableArray *)parseGeneralInfo:(NSData *)data
++(JMGeneralInfo *)parseGeneralInfo:(NSData *)data
 {
+    NSError *error;
     
+    JMGeneralInfo *generalInfo = [[JMGeneralInfo alloc] initWithData:data error:&error];
     
+    if(error){
+        NSLog(@"Error while parsing %@",error);
+    }
     
+    return generalInfo;
 }
 
 

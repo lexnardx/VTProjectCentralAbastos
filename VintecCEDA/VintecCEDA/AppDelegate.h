@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VTSplashScreenViewController.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    VTSplashScreenViewController *splashScreen;
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

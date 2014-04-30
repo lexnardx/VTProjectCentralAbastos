@@ -8,6 +8,9 @@
 
 #import "JSONModel.h"
 
+@protocol JMLocale
+@end
+
 @interface JMLocale : JSONModel
 
 @property(nonatomic) NSInteger identifier;

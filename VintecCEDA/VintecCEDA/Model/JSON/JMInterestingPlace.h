@@ -9,6 +9,9 @@
 #import "JSONModel.h"
 #import "JMLocation.h"
 
+@protocol JMInterestingPlace
+@end
+
 @interface JMInterestingPlace : JSONModel
 
 

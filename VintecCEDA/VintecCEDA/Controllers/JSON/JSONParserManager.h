@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JMGeneralInfo.h"
 
 @interface JSONParserManager : NSObject
 
-+(NSMutableArray *)parseGeneralInfo:(NSData *)data;
++(JMGeneralInfo *)parseGeneralInfo:(NSData *)data;
 +(NSDictionary *)parseLastUpdates:(NSData *)data;
 
 @end

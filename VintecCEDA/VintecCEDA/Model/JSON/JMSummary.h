@@ -8,6 +8,10 @@
 
 #import "JSONModel.h"
 
+
+@protocol JMSummary
+@end
+
 @interface JMSummary : JSONModel
 
 

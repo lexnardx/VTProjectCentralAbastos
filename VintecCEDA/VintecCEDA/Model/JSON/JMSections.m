@@ -10,6 +10,11 @@
 
 @implementation JMSections
 
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+
 +(JSONKeyMapper*)keyMapper
 {
     return [[JSONKeyMapper alloc] initWithDictionary:@{

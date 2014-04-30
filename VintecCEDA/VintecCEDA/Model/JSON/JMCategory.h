@@ -8,8 +8,10 @@
 
 #import "JSONModel.h"
 
-@interface JMCategory : JSONModel
+@protocol JMCategory
+@end
 
+@interface JMCategory : JSONModel
 
 @property(nonatomic) NSInteger identifier;
 @property(nonatomic,strong) UIImage *icon;

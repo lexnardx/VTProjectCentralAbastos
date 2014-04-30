@@ -8,6 +8,9 @@
 
 #import "JSONModel.h"
 
+@protocol JMProduct
+@end
+
 @interface JMProduct : JSONModel
 
 @property(nonatomic) NSInteger categoryId;

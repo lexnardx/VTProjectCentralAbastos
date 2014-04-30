@@ -13,6 +13,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    splashScreen = [[VTSplashScreenViewController alloc] initWithNibName:@"VTSplashScreenViewController" bundle:nil];
+    
+    self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+    
+    self.window.rootViewController = splashScreen;
+    
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
