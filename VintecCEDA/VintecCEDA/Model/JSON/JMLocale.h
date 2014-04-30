@@ -16,8 +16,8 @@
 @property(nonatomic) NSInteger identifier;
 @property(nonatomic) double latitude;
 @property(nonatomic) double longitude;
-@property(nonatomic) NSInteger number;
-@property(nonatomic) NSString *hall;
-@property(nonatomic) NSString *subdivision;
+@property(nonatomic,strong) NSString *number;
+@property(nonatomic,strong) NSString *hall;
+@property(nonatomic,strong) NSString *subdivision;
 
 @end

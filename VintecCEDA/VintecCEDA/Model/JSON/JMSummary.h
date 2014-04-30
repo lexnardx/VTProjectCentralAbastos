@@ -14,7 +14,6 @@
 
 @interface JMSummary : JSONModel
 
-
 @property(nonatomic) NSInteger categories;
 @property(nonatomic) NSInteger errorCode;
 @property(nonatomic) NSInteger interestingPlaces;
@@ -25,7 +24,7 @@
 @property(nonatomic) NSInteger sections;
 @property(nonatomic) NSInteger types;
 @property(nonatomic) NSString *lastUpdateFormat;
-@property(nonatomic) NSString *lastUpdate;
+@property(nonatomic) NSDate *lastUpdate;
 
 
 @end

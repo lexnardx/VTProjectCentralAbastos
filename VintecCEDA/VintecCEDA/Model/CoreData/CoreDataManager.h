@@ -10,13 +10,14 @@
 
 @interface CoreDataManager : NSObject
 {
-    NSManagedObjectContext *managedObjectContext;
-    NSManagedObjectModel *managedObjectModel;
-    NSPersistentStoreCoordinator *persistentCoordinator;
+    
 }
 
+@property (nonatomic,strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic,strong) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic,strong) NSPersistentStoreCoordinator *persistentCoordinator;
 
--(id)sharedInstance;
++(id)sharedInstance;
 
 
 
