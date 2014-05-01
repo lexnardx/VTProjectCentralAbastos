@@ -7,6 +7,7 @@
 //
 
 #import "VTSplashScreenViewController.h"
+#import "CoreDataManager.h"
 
 @interface VTSplashScreenViewController ()
 
@@ -54,6 +55,7 @@
 {
     
     generalInfo = [JSONParserManager parseGeneralInfo:data];
+    [[CoreDataManager sharedInstance] insertOrUpdateGeneralInfo:generalInfo];
     
     
 }

@@ -24,13 +24,152 @@
 #import "Location.h"
 #import "JMInterestingPlace.h"
 #import "Place.h"
+#import "JMGeneralInfo.h"
 
-static CoreDataManager *sharedInstance;
+static CoreDataManager *sharedInstance = nil;
 
 @implementation CoreDataManager
 
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentCoordinator = _persistentCoordinator;
+
+#pragma mark - CoreData Initialization
+
++(id)sharedInstance
+{
+    if (!sharedInstance) {
+        sharedInstance = [[CoreDataManager alloc] init];
+    }
+    
+    return sharedInstance;
+}
+
+- (id)init {
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
 
 #pragma mark - InsertOrUpdate
+
+
+-(NSArray *)fetchRowWithFeature:(enum VTFeature)section
+{
+    NSString *entityName = @"";
+    
+    switch (section) {
+        case VTFeatureType:
+            entityName = @"Type";
+            break;
+        case VTFeaturePlace:
+            entityName = @"Place";
+            break;
+        case VTFeatureLocale:
+            entityName = @"Locale";
+            break;
+        case VTFeatureProduct:
+            entityName = @"Product";
+            break;
+        case VTFeatureSection:
+            entityName = @"Section";
+            break;
+        case VTFeatureCategory:
+            entityName = @"CDCategory";
+            break;
+        case VTFeatureLocation:
+            entityName = @"Location";
+            break;
+            
+        default:
+            return  nil;
+    }
+    
+    
+    NSLog(@"Fetching %@",entityName);
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Specify criteria for filtering which objects to fetch
+    //NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", [NSNumber numberWithInteger:section.identifier]];
+    //[fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Error while fetching %@ : %@",entityName,[error localizedDescription]);
+    }
+    
+    return fetchedObjects;
+}
+
+
+-(Summary *)fetchSummary
+{
+    
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Summary" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Error while fetching summary : %@",[error localizedDescription]);
+    }
+    
+    return [fetchedObjects count]>0 ? [fetchedObjects lastObject] : nil;
+}
+
+
+
+#pragma mark - InsertOrUpdate
+
+-(void)insertOrUpdateGeneralInfo:(JMGeneralInfo *)generalInfo
+{
+    if (!generalInfo) {
+        return;
+    }
+    
+    for (JMCategory *category in generalInfo.categories) {
+        [self insertOrUpdateCategory:category];
+        
+    }
+    
+    for (JMInterestingPlace *place in generalInfo.interestingPlaces) {
+        [self insertOrUpdatePlace:place];
+        
+    }
+    
+    for (JMLocale *locale in generalInfo.locales) {
+        [self insertOrUpdateLocale:locale];
+        
+    }
+    
+    for (JMProduct *product in generalInfo.products) {
+        [self insertOrUpdateProduct:product];
+        
+    }
+    
+    
+    [self insertOrUpdateSummary:generalInfo.summary];
+    
+    for (JMSections *section in generalInfo.sections) {
+        [self insertOrUpdateSection:section];
+    }
+    
+    for (JMType *type in generalInfo.types) {
+        [self insertOrUpdateType:type];
+    }
+    
+}
 
 -(void)insertOrUpdateSection:(JMSections *)section
 {
@@ -49,7 +188,7 @@ static CoreDataManager *sharedInstance;
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Section" inManagedObjectContext:self.managedObjectContext];
     }else{
         entry = [fetchedObjects lastObject];
@@ -74,7 +213,7 @@ static CoreDataManager *sharedInstance;
     CDCategory *entry = nil;
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Category" inManagedObjectContext:self.managedObjectContext];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CDCategory" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
     // Specify criteria for filtering which objects to fetch
@@ -86,8 +225,8 @@ static CoreDataManager *sharedInstance;
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
-        entry = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.managedObjectContext];
+    if ([fetchedObjects count] == 0) {
+        entry = [NSEntityDescription insertNewObjectForEntityForName:@"CDCategory" inManagedObjectContext:self.managedObjectContext];
         
     }else{
         entry = [fetchedObjects lastObject];
@@ -123,7 +262,7 @@ static CoreDataManager *sharedInstance;
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Type" inManagedObjectContext:self.managedObjectContext];
     }else{
         entry = [fetchedObjects lastObject];
@@ -151,7 +290,7 @@ static CoreDataManager *sharedInstance;
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Summary" inManagedObjectContext:self.managedObjectContext];
     }else{
         entry = [fetchedObjects lastObject];
@@ -182,10 +321,15 @@ static CoreDataManager *sharedInstance;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
+    // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", [NSNumber numberWithInteger:product.identifier]];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Product" inManagedObjectContext:self.managedObjectContext];
     }else{
         entry = [fetchedObjects lastObject];
@@ -196,7 +340,7 @@ static CoreDataManager *sharedInstance;
     entry.name = product.name;
     entry.type = [NSNumber numberWithInteger:product.typeId];
     entry.unit = product.unit;
-    entry.categoryId = [NSNumber numberWithInteger:product.categoryId];
+    entry.category = [NSNumber numberWithInteger:product.categoryId];
     
     if (![self.managedObjectContext save:&error]) {
         NSLog(@"Couldn't save product: %@", [error localizedDescription]);
@@ -212,10 +356,15 @@ static CoreDataManager *sharedInstance;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Locale" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
+    // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", [NSNumber numberWithInteger:locale.identifier]];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Locale" inManagedObjectContext:self.managedObjectContext];
     }else{
         entry = [fetchedObjects lastObject];
@@ -244,10 +393,15 @@ static CoreDataManager *sharedInstance;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Place" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
+    // Specify criteria for filtering which objects to fetch
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"identifier == %@", [NSNumber numberWithInteger:place.identifier]];
+    [fetchRequest setPredicate:predicate];
+    // Specify how the fetched objects should be sorted
+    
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:self.managedObjectContext];
         
         
@@ -317,10 +471,12 @@ static CoreDataManager *sharedInstance;
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
     [fetchRequest setEntity:entity];
     
+    
+    
     NSError *error = nil;
     NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
-    if (fetchedObjects == nil) {
+    if ([fetchedObjects count] == 0) {
         entry = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:self.managedObjectContext];
     }else{
         entry = [fetchedObjects lastObject];
@@ -336,50 +492,60 @@ static CoreDataManager *sharedInstance;
     
 }
 
-#pragma mark - CoreData Initialization
 
-+(id)sharedInstance
-{
-    if (!sharedInstance) {
-        sharedInstance = [[CoreDataManager alloc] init];
-    }
-    
-    return sharedInstance;
-}
+#pragma mark - CoreData SettingUp
 
 - (NSManagedObjectContext *) managedObjectContext {
     
-    if (self.managedObjectContext != nil) {
-        return self.managedObjectContext;
+    if (_managedObjectContext != nil) {
+        
+        return _managedObjectContext;
+        
     }
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    NSPersistentStoreCoordinator *coordinator = [self persistentCoordinator];
     
     if (coordinator != nil) {
-        self.managedObjectContext = [[NSManagedObjectContext alloc] init];
-        [self.managedObjectContext setPersistentStoreCoordinator: coordinator];
+        
+        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        
+        [_managedObjectContext setPersistentStoreCoordinator: coordinator];
+        
     }
-    return self.managedObjectContext;
+    
+    
+    
+    return _managedObjectContext;
     
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
     
-    if (self.managedObjectModel != nil) {
-        return self.managedObjectModel;
+    if (_managedObjectModel != nil) {
+        
+        return _managedObjectModel;
+        
     }
-    self.managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
-    return self.managedObjectModel;
+    
+    _managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+    
+    
+    
+    return _managedObjectModel;
     
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+- (NSPersistentStoreCoordinator *)persistentCoordinator {
     
-    if (self.persistentCoordinator != nil) {
-        return self.persistentCoordinator;
+    if (_persistentCoordinator != nil) {
+        
+        return _persistentCoordinator;
+        
     }
+    
     NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory]
-                                               stringByAppendingPathComponent: @"CEDA.sqlite"]];
+                                               
+                                               stringByAppendingPathComponent: @"DataBase.sqlite"]];
     
     NSError *error = nil;
     
@@ -387,21 +553,26 @@ static CoreDataManager *sharedInstance;
     						 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
     						 [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption, nil];
     
-    self.persistentCoordinator = [[NSPersistentStoreCoordinator alloc]
+    _persistentCoordinator = [[NSPersistentStoreCoordinator alloc]
+                                   
                                    initWithManagedObjectModel:[self managedObjectModel]];
     
-    if(![self.persistentCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+    if(![_persistentCoordinator addPersistentStoreWithType:NSSQLiteStoreType
+         
                                                   configuration:nil URL:storeUrl options:options error:&error]) {
+        
         /*Error for store creation should be handled in here*/
+        
         NSLog(@"Error PersistentStoreCoordinator %@",[error localizedDescription]);
         
     }
     
-    return self.persistentCoordinator;
+    return _persistentCoordinator;
     
 }
 - (NSString *)applicationDocumentsDirectory {
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
+
 
 @end

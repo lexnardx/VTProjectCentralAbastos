@@ -7,6 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JMGeneralInfo.h"
+
+
+enum VTFeature : NSUInteger {
+    VTFeatureCategory,
+    VTFeatureLocale,
+    VTFeatureLocation,
+    VTFeaturePlace,
+    VTFeatureProduct,
+    VTFeatureSection,
+    VTFeatureSummary,
+    VTFeatureType,
+};
+
 
 @interface CoreDataManager : NSObject
 {
@@ -19,6 +33,7 @@
 
 +(id)sharedInstance;
 
+-(void)insertOrUpdateGeneralInfo:(JMGeneralInfo *)generalInfo;
 
 
 @end
