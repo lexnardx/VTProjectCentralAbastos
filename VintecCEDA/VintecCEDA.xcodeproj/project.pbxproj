@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E2862621913D63400183D97 /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2862611913D63400183D97 /* Util.m */; };
+		3E2862661913DCAB00183D97 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2862651913DCAB00183D97 /* CustomAnnotation.m */; };
+		3E2862691914037600183D97 /* UIUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E2862681914037600183D97 /* UIUtil.m */; };
+		3E28626C19140B6A00183D97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E28626B19140B6A00183D97 /* Images.xcassets */; };
+		3E2862701914149A00183D97 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E28626E1914149A00183D97 /* CategoryTableViewController.m */; };
+		3E2862711914149A00183D97 /* CategoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E28626F1914149A00183D97 /* CategoryTableViewController.xib */; };
 		3E75061C1912B1D60036A4E2 /* Locale.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75061B1912B1D60036A4E2 /* Locale.m */; };
 		3E75061F1912B1D60036A4E2 /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75061E1912B1D60036A4E2 /* Section.m */; };
 		3E7506221912B1D70036A4E2 /* CDCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7506211912B1D70036A4E2 /* CDCategory.m */; };
@@ -15,10 +21,12 @@
 		3E75062B1912B1D70036A4E2 /* Summary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75062A1912B1D70036A4E2 /* Summary.m */; };
 		3E75062E1912B1D70036A4E2 /* Type.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75062D1912B1D70036A4E2 /* Type.m */; };
 		3E7506311912B1D70036A4E2 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7506301912B1D70036A4E2 /* Place.m */; };
+		3E7506351913420E0036A4E2 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7506341913420E0036A4E2 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3E7506371913469C0036A4E2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7506361913469C0036A4E2 /* MapKit.framework */; };
+		3E75064019134EFD0036A4E2 /* splash_screen-iPhone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E75063E19134EFD0036A4E2 /* splash_screen-iPhone4.png */; };
+		3E75064119134EFD0036A4E2 /* splash_screen-iPhone5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E75063F19134EFD0036A4E2 /* splash_screen-iPhone5.png */; };
 		3E7CA088190F2AE800234F0A /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CA087190F2AE800234F0A /* ConnectionManager.m */; };
 		3E7CA08C190F421900234F0A /* JSONParserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7CA08B190F421900234F0A /* JSONParserManager.m */; };
-		3E8C32D81910809D0075A3B8 /* VTBehaviorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8C32D61910809D0075A3B8 /* VTBehaviorViewController.m */; };
-		3E8C32D91910809D0075A3B8 /* VTBehaviorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8C32D71910809D0075A3B8 /* VTBehaviorViewController.xib */; };
 		3E8C32DD191080C20075A3B8 /* VTInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8C32DB191080C20075A3B8 /* VTInfoViewController.m */; };
 		3E8C32DE191080C20075A3B8 /* VTInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E8C32DC191080C20075A3B8 /* VTInfoViewController.xib */; };
 		3E8C32E5191080DE0075A3B8 /* VTTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8C32E3191080DE0075A3B8 /* VTTableViewController.m */; };
@@ -58,7 +66,6 @@
 		A7F06407190F043500EC3787 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A7F06405190F043500EC3787 /* InfoPlist.strings */; };
 		A7F06409190F043500EC3787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F06408190F043500EC3787 /* main.m */; };
 		A7F0640D190F043500EC3787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F0640C190F043500EC3787 /* AppDelegate.m */; };
-		A7F06415190F043500EC3787 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7F06414190F043500EC3787 /* Images.xcassets */; };
 		A7F0641C190F043500EC3787 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F0641B190F043500EC3787 /* XCTest.framework */; };
 		A7F0641D190F043500EC3787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F063FC190F043500EC3787 /* Foundation.framework */; };
 		A7F0641E190F043500EC3787 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F06400190F043500EC3787 /* UIKit.framework */; };
@@ -77,6 +84,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E2862601913D63400183D97 /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		3E2862611913D63400183D97 /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
+		3E2862641913DCAB00183D97 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		3E2862651913DCAB00183D97 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		3E2862671914037600183D97 /* UIUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUtil.h; sourceTree = "<group>"; };
+		3E2862681914037600183D97 /* UIUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIUtil.m; sourceTree = "<group>"; };
+		3E28626B19140B6A00183D97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3E28626D1914149A00183D97 /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		3E28626E1914149A00183D97 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		3E28626F1914149A00183D97 /* CategoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewController.xib; sourceTree = "<group>"; };
 		3E75061A1912B1D60036A4E2 /* Locale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locale.h; sourceTree = "<group>"; };
 		3E75061B1912B1D60036A4E2 /* Locale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Locale.m; sourceTree = "<group>"; };
 		3E75061D1912B1D60036A4E2 /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
@@ -93,13 +110,15 @@
 		3E75062D1912B1D70036A4E2 /* Type.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Type.m; sourceTree = "<group>"; };
 		3E75062F1912B1D70036A4E2 /* Place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Place.h; sourceTree = "<group>"; };
 		3E7506301912B1D70036A4E2 /* Place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Place.m; sourceTree = "<group>"; };
+		3E7506331913420E0036A4E2 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		3E7506341913420E0036A4E2 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		3E7506361913469C0036A4E2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3E75063E19134EFD0036A4E2 /* splash_screen-iPhone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_screen-iPhone4.png"; sourceTree = "<group>"; };
+		3E75063F19134EFD0036A4E2 /* splash_screen-iPhone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_screen-iPhone5.png"; sourceTree = "<group>"; };
 		3E7CA086190F2AE800234F0A /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
 		3E7CA087190F2AE800234F0A /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
 		3E7CA08A190F421900234F0A /* JSONParserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParserManager.h; sourceTree = "<group>"; };
 		3E7CA08B190F421900234F0A /* JSONParserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParserManager.m; sourceTree = "<group>"; };
-		3E8C32D51910809D0075A3B8 /* VTBehaviorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTBehaviorViewController.h; sourceTree = "<group>"; };
-		3E8C32D61910809D0075A3B8 /* VTBehaviorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTBehaviorViewController.m; sourceTree = "<group>"; };
-		3E8C32D71910809D0075A3B8 /* VTBehaviorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VTBehaviorViewController.xib; sourceTree = "<group>"; };
 		3E8C32DA191080C20075A3B8 /* VTInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTInfoViewController.h; sourceTree = "<group>"; };
 		3E8C32DB191080C20075A3B8 /* VTInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTInfoViewController.m; sourceTree = "<group>"; };
 		3E8C32DC191080C20075A3B8 /* VTInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VTInfoViewController.xib; sourceTree = "<group>"; };
@@ -170,7 +189,6 @@
 		A7F0640A190F043500EC3787 /* VintecCEDA-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VintecCEDA-Prefix.pch"; sourceTree = "<group>"; };
 		A7F0640B190F043500EC3787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7F0640C190F043500EC3787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7F06414190F043500EC3787 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7F0641A190F043500EC3787 /* VintecCEDATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VintecCEDATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7F0641B190F043500EC3787 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A7F06423190F043500EC3787 /* VintecCEDATests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VintecCEDATests-Info.plist"; sourceTree = "<group>"; };
@@ -183,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7506371913469C0036A4E2 /* MapKit.framework in Frameworks */,
 				3E8C33021910A5470075A3B8 /* CoreData.framework in Frameworks */,
 				A7F063FF190F043500EC3787 /* CoreGraphics.framework in Frameworks */,
 				A7F06401190F043500EC3787 /* UIKit.framework in Frameworks */,
@@ -226,6 +245,24 @@
 			path = MapingClasses;
 			sourceTree = "<group>";
 		};
+		3E750632191342030036A4E2 /* Base64Data */ = {
+			isa = PBXGroup;
+			children = (
+				3E7506331913420E0036A4E2 /* NSData+Base64.h */,
+				3E7506341913420E0036A4E2 /* NSData+Base64.m */,
+			);
+			path = Base64Data;
+			sourceTree = "<group>";
+		};
+		3E75063D19134EFD0036A4E2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E75063E19134EFD0036A4E2 /* splash_screen-iPhone4.png */,
+				3E75063F19134EFD0036A4E2 /* splash_screen-iPhone5.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3E7CA082190F297000234F0A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,8 +276,12 @@
 		3E7CA083190F297000234F0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3E2862601913D63400183D97 /* Util.h */,
+				3E2862611913D63400183D97 /* Util.m */,
 				3E8C32F9191097DA0075A3B8 /* CoreData */,
 				3E7CA08D190F445A00234F0A /* JSON */,
+				3E2862671914037600183D97 /* UIUtil.h */,
+				3E2862681914037600183D97 /* UIUtil.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,21 +335,10 @@
 				3E8C32F31910899F0075A3B8 /* Splash */,
 				3E8C32ED1910815E0075A3B8 /* TabBarManager */,
 				3E8C32E7191081270075A3B8 /* Map */,
-				3E8C32D1191080460075A3B8 /* Behavior */,
 				3E8C32D2191080460075A3B8 /* Info */,
 				3E8C32D4191080460075A3B8 /* Table */,
 			);
 			path = Sections;
-			sourceTree = "<group>";
-		};
-		3E8C32D1191080460075A3B8 /* Behavior */ = {
-			isa = PBXGroup;
-			children = (
-				3E8C32D51910809D0075A3B8 /* VTBehaviorViewController.h */,
-				3E8C32D61910809D0075A3B8 /* VTBehaviorViewController.m */,
-				3E8C32D71910809D0075A3B8 /* VTBehaviorViewController.xib */,
-			);
-			path = Behavior;
 			sourceTree = "<group>";
 		};
 		3E8C32D2191080460075A3B8 /* Info */ = {
@@ -327,6 +357,9 @@
 				3E8C32E2191080DE0075A3B8 /* VTTableViewController.h */,
 				3E8C32E3191080DE0075A3B8 /* VTTableViewController.m */,
 				3E8C32E4191080DE0075A3B8 /* VTTableViewController.xib */,
+				3E28626D1914149A00183D97 /* CategoryTableViewController.h */,
+				3E28626E1914149A00183D97 /* CategoryTableViewController.m */,
+				3E28626F1914149A00183D97 /* CategoryTableViewController.xib */,
 			);
 			path = Table;
 			sourceTree = "<group>";
@@ -334,6 +367,8 @@
 		3E8C32E7191081270075A3B8 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				3E2862641913DCAB00183D97 /* CustomAnnotation.h */,
+				3E2862651913DCAB00183D97 /* CustomAnnotation.m */,
 				3E8C32E8191081330075A3B8 /* VTMapViewController.h */,
 				3E8C32E9191081330075A3B8 /* VTMapViewController.m */,
 				3E8C32EA191081330075A3B8 /* VTMapViewController.xib */,
@@ -375,6 +410,7 @@
 		3EAF3F72190F5787009EE2A0 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				3E750632191342030036A4E2 /* Base64Data */,
 				3EAF3F73190F5787009EE2A0 /* JSONModel */,
 			);
 			path = lib;
@@ -464,6 +500,7 @@
 		A7F063FB190F043500EC3787 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E7506361913469C0036A4E2 /* MapKit.framework */,
 				3E8C33011910A5470075A3B8 /* CoreData.framework */,
 				A7F063FC190F043500EC3787 /* Foundation.framework */,
 				A7F063FE190F043500EC3787 /* CoreGraphics.framework */,
@@ -481,7 +518,6 @@
 				3E7CA083190F297000234F0A /* Model */,
 				A7F0640B190F043500EC3787 /* AppDelegate.h */,
 				A7F0640C190F043500EC3787 /* AppDelegate.m */,
-				A7F06414190F043500EC3787 /* Images.xcassets */,
 				A7F06403190F043500EC3787 /* Supporting Files */,
 			);
 			path = VintecCEDA;
@@ -490,6 +526,8 @@
 		A7F06403190F043500EC3787 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3E28626B19140B6A00183D97 /* Images.xcassets */,
+				3E75063D19134EFD0036A4E2 /* Resources */,
 				A7F06404190F043500EC3787 /* VintecCEDA-Info.plist */,
 				A7F06405190F043500EC3787 /* InfoPlist.strings */,
 				A7F06408190F043500EC3787 /* main.m */,
@@ -592,12 +630,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7F06415190F043500EC3787 /* Images.xcassets in Resources */,
-				3E8C32D91910809D0075A3B8 /* VTBehaviorViewController.xib in Resources */,
+				3E28626C19140B6A00183D97 /* Images.xcassets in Resources */,
+				3E75064119134EFD0036A4E2 /* splash_screen-iPhone5.png in Resources */,
 				3E8C32F8191089BB0075A3B8 /* VTSplashScreenViewController.xib in Resources */,
+				3E75064019134EFD0036A4E2 /* splash_screen-iPhone4.png in Resources */,
 				3E8C32E6191080DE0075A3B8 /* VTTableViewController.xib in Resources */,
 				3E8C32DE191080C20075A3B8 /* VTInfoViewController.xib in Resources */,
 				A7F06407190F043500EC3787 /* InfoPlist.strings in Resources */,
+				3E2862711914149A00183D97 /* CategoryTableViewController.xib in Resources */,
 				3E8C32F21910818B0075A3B8 /* VTTabBarViewController.xib in Resources */,
 				3E8C32EC191081330075A3B8 /* VTMapViewController.xib in Resources */,
 			);
@@ -620,6 +660,7 @@
 			files = (
 				3E8C32F11910818B0075A3B8 /* VTTabBarViewController.m in Sources */,
 				3E75061F1912B1D60036A4E2 /* Section.m in Sources */,
+				3E2862621913D63400183D97 /* Util.m in Sources */,
 				3EAF3FA5190F5ABA009EE2A0 /* JMLocale.m in Sources */,
 				3EAF3F90190F5787009EE2A0 /* JSONModel.m in Sources */,
 				3E75061C1912B1D60036A4E2 /* Locale.m in Sources */,
@@ -629,12 +670,14 @@
 				3EAF3F71190F540E009EE2A0 /* JMGeneralInfo.m in Sources */,
 				3EAF3F8F190F5787009EE2A0 /* JSONModel+CoreData.m in Sources */,
 				3EAF3F9C190F57F2009EE2A0 /* JMCategory.m in Sources */,
+				3E2862691914037600183D97 /* UIUtil.m in Sources */,
 				3EAF3F9F190F58E1009EE2A0 /* JMInterestingPlace.m in Sources */,
 				3E8C32FF19109EFB0075A3B8 /* CoreDataManager.m in Sources */,
 				3E75062E1912B1D70036A4E2 /* Type.m in Sources */,
 				3EAF3F97190F5787009EE2A0 /* JSONModel+networking.m in Sources */,
 				3E7506311912B1D70036A4E2 /* Place.m in Sources */,
 				3E75062B1912B1D70036A4E2 /* Summary.m in Sources */,
+				3E2862701914149A00183D97 /* CategoryTableViewController.m in Sources */,
 				A7F0640D190F043500EC3787 /* AppDelegate.m in Sources */,
 				3EAF3F91190F5787009EE2A0 /* JSONModelArray.m in Sources */,
 				3EAF3F96190F5787009EE2A0 /* JSONHTTPClient.m in Sources */,
@@ -647,15 +690,16 @@
 				3E8C32E5191080DE0075A3B8 /* VTTableViewController.m in Sources */,
 				3EAF3FAE190F5EB0009EE2A0 /* JMSections.m in Sources */,
 				3E8C32F7191089BB0075A3B8 /* VTSplashScreenViewController.m in Sources */,
-				3E8C32D81910809D0075A3B8 /* VTBehaviorViewController.m in Sources */,
 				3E7CA088190F2AE800234F0A /* ConnectionManager.m in Sources */,
 				3EAF3F93190F5787009EE2A0 /* JSONModelError.m in Sources */,
 				3E8C32EB191081330075A3B8 /* VTMapViewController.m in Sources */,
+				3E2862661913DCAB00183D97 /* CustomAnnotation.m in Sources */,
 				3E7506221912B1D70036A4E2 /* CDCategory.m in Sources */,
 				3E7506281912B1D70036A4E2 /* Location.m in Sources */,
 				3EAF3FA8190F5BE0009EE2A0 /* JMProduct.m in Sources */,
 				A7F06409190F043500EC3787 /* main.m in Sources */,
 				3E8C32DD191080C20075A3B8 /* VTInfoViewController.m in Sources */,
+				3E7506351913420E0036A4E2 /* NSData+Base64.m in Sources */,
 				3E8C32FC1910982A0075A3B8 /* DataBase.xcdatamodeld in Sources */,
 				3EAF3FA2190F598C009EE2A0 /* JMLocation.m in Sources */,
 			);
@@ -774,12 +818,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Carlos Rubio (22NE795243)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VintecCEDA/VintecCEDA-Prefix.pch";
 				INFOPLIST_FILE = "VintecCEDA/VintecCEDA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4B7C6472-CDC2-4545-A34C-0DDF73BBAD45";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -789,12 +834,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Carlos Rubio (22NE795243)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VintecCEDA/VintecCEDA-Prefix.pch";
 				INFOPLIST_FILE = "VintecCEDA/VintecCEDA-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4B7C6472-CDC2-4545-A34C-0DDF73BBAD45";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -8,7 +8,11 @@
 
 #import "JMSections.h"
 
+
 @implementation JMSections
+
+@synthesize icon = _icon;
+@synthesize image = _image;
 
 +(BOOL)propertyIsOptional:(NSString*)propertyName
 {
@@ -25,6 +29,28 @@
                                                        @"orden": @"index",
                                                        @"texto": @"text"
                                                        }];
+}
+
++(JMSections *)jMSectionFromSectionObject:(Section *)section
+{
+    JMSections *jmsection = [[JMSections alloc]init];
+    
+    if (!section) {
+        return jmsection;
+    }
+    
+    
+    
+    jmsection.identifier = [section.identifier integerValue];
+    jmsection.iconBase64 = section.icon;
+    jmsection.imageBase64 = section.image;
+    jmsection.name = section.name;
+    jmsection.index = [section.order integerValue];
+    jmsection.text = section.text;
+
+    
+    return jmsection;
+    
 }
 
 @end

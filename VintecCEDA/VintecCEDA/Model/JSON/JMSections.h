@@ -7,6 +7,7 @@
 //
 
 #import "JSONModel.h"
+#import "Section.h"
 
 @protocol JMSections
 @end
@@ -22,5 +23,6 @@
 @property(nonatomic) NSInteger index;
 @property(nonatomic,strong) NSString *text;
 
++(JMSections *)jMSectionFromSectionObject:(Section *)section;
 
 @end

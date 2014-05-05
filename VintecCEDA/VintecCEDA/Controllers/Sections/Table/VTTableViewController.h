@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VTTableViewController : UIViewController
+@interface VTTableViewController : UIViewController<UISearchBarDelegate,UISearchDisplayDelegate,UITableViewDataSource,UITableViewDelegate>
+{
+    
+}
+
+
 
 @end

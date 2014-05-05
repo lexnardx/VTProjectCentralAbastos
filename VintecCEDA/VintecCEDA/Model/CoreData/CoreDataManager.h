@@ -34,6 +34,7 @@ enum VTFeature : NSUInteger {
 +(id)sharedInstance;
 
 -(void)insertOrUpdateGeneralInfo:(JMGeneralInfo *)generalInfo;
+-(NSArray *)fetchRowsWithFeature:(enum VTFeature)section;
 
 
 @end

@@ -10,4 +10,7 @@
 
 @interface VTTabBarViewController : UITabBarController
 
+
+@property(nonatomic,strong) NSArray *tabBarItems;
+
 @end

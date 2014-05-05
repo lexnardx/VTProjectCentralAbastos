@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface VTMapViewController : UIViewController
+{
+    
+    IBOutlet MKMapView *mapView;
+    NSMutableArray *annotations;
+}
+
 
 @end

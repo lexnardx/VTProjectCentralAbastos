@@ -10,14 +10,25 @@
 #import "ConnectionManager.h"
 #import "JSONParserManager.h"
 #import "JMGeneralInfo.h"
+#import "VTTableViewController.h"
+#import "VTMapViewController.h"
+#import "VTInfoViewController.h"
+#import "VTTabBarViewController.h"
 
 
 @interface VTSplashScreenViewController : UIViewController<ConnectionManagerDelegate>
 {
-    UIImageView *background;
-    UIActivityIndicatorView *activityIndicator;
+    IBOutlet UIImageView *background;
+    IBOutlet UIActivityIndicatorView *activityIndicator;
+    IBOutlet UILabel *status;
     ConnectionManager *manager;
     JMGeneralInfo *generalInfo;
+    
+    VTTabBarViewController *tabBarController;
+    VTTableViewController *tableController;
+    VTMapViewController *mapController;
+   
+    
 }
 
 @end

@@ -55,7 +55,7 @@ static CoreDataManager *sharedInstance = nil;
 #pragma mark - InsertOrUpdate
 
 
--(NSArray *)fetchRowWithFeature:(enum VTFeature)section
+-(NSArray *)fetchRowsWithFeature:(enum VTFeature)section
 {
     NSString *entityName = @"";
     
@@ -441,7 +441,7 @@ static CoreDataManager *sharedInstance = nil;
         Location *locationObject = nil;
         
         for (Location *aux in place.location) {
-            if ([locationObject.identifier isEqualToNumber:aux.identifier]) {
+            if (jmPlace.identifier == [aux.identifier integerValue]) {
                 locationObject = aux;
             }
         }

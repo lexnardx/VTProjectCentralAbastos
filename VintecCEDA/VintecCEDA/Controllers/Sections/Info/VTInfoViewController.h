@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JMSections.h"
 
 @interface VTInfoViewController : UIViewController
+{
+    IBOutlet UIImageView *imageSection;
+    IBOutlet UILabel *titleSection;
+    IBOutlet UITextView *descriptionSection;
+}
+
+@property(nonatomic,strong) JMSections *section;
 
 @end

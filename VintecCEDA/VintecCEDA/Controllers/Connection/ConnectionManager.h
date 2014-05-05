@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+
+enum VTConnectionType : NSUInteger {
+    
+    VTConnectionTypeInstall,
+    VTConnectionTypeCheckUpdate,
+    VTConnectionTypeUpdatePrices,
+    VTConnectionTypeUpdateInformation,
+};
+
 @class ConnectionManager;
 
 @protocol ConnectionManagerDelegate <NSObject>
@@ -22,6 +31,7 @@
 
 
 @property (nonatomic, strong) id <ConnectionManagerDelegate> delegate;
+@property (nonatomic) enum VTConnectionType connectionType;
 
 -(void)fetchGeneralInfo;
 -(void)fetchInfoUpdatesInDate:(NSDate *)date;

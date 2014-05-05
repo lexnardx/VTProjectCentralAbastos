@@ -7,6 +7,8 @@
 //
 
 #import "JMCategory.h"
+#import "NSData+Base64.h"
+#import "Util.h"
 
 @implementation JMCategory
 
@@ -23,6 +25,27 @@
                                                        @"nombre": @"name"
                                                        }];
 }
+
++(JMCategory *)jMCategoryFromCategoryObject:(CDCategory *)category
+{
+    JMCategory *jmcategory = [[JMCategory alloc] init];
+    
+    if (!category) {
+        return jmcategory;
+    }
+    
+
+    
+    jmcategory.identifier = [category.identifier integerValue];
+    jmcategory.iconBase64 = category.icon;
+    jmcategory.name = category.name;
+    
+    
+    return jmcategory;
+    
+    
+}
+
 
 
 @end

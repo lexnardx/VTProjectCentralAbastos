@@ -7,6 +7,7 @@
 //
 
 #import "JSONModel.h"
+#import "CDCategory.h"
 
 @protocol JMCategory
 @end
@@ -17,5 +18,7 @@
 @property(nonatomic,strong) UIImage *icon;
 @property(nonatomic,strong) NSString *iconBase64;
 @property(nonatomic,strong) NSString *name;
+
++(JMCategory *)jMCategoryFromCategoryObject:(CDCategory *)category;
 
 @end

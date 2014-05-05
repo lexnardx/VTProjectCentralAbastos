@@ -23,12 +23,15 @@
 @implementation ConnectionManager
 
 @synthesize delegate;
+@synthesize connectionType;
 
 -(void)fetchGeneralInfo
 {
     if (self.connection) {
         [self.connection cancel];
     }
+    
+    connectionType = VTConnectionTypeInstall;
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL_GENERAL_INFO]];
     NSMutableDictionary *headers = [NSMutableDictionary dictionary];
@@ -47,6 +50,9 @@
     if (self.connection) {
         [self.connection cancel];
     }
+    
+    connectionType = VTConnectionTypeUpdate;
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     
@@ -72,6 +78,8 @@
         [self.connection cancel];
     }
     
+    connectionType = VTConnectionTypeUpdatePrices;
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL_UPDATE_PRICES]];
     NSMutableDictionary *headers = [NSMutableDictionary dictionary];
     [headers setObject:@"iPhone" forKey:@"User-Agent"];
@@ -89,6 +97,8 @@
     if (self.connection) {
         [self.connection cancel];
     }
+    
+    connectionType = VTConnectionTypeCheckUpdate;
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URL_CHECK_UPDATES]];
     NSMutableDictionary *headers = [NSMutableDictionary dictionary];
